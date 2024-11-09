@@ -1,0 +1,31 @@
+﻿Консольне приложение для создание и заполнения базы данными.
+
+Article
+Role
+User
+UserProfile
+
+Так же есть варианты создания базы:
+- MSSQL
+- Postgres
+
+Что бы создать создать базы с данными посемти в конфиге обходимое подключение.
+
+- MSSQL
+- Postgres
+
+помести свои строки в подключения в конфиг
+{
+  "ConnectionStrings": {
+    "PostgreSql": "Host=localhost;Port=5432;Database=Tasta;Username=postgres;Password=0017;",
+    "SqlServer": "Data Source=localhost,1433;Initial Catalog=Tast;User ID=sa;Password=!A017!A17;TrustServerCertificate=True;"
+  }
+}
+
+Так же можно создать Nuget пакет который уже имеет реализацию паттерна репозиторий.
+Который дает доступ к основным данным, кроме того этот пакет будет содержать все модели для доступа к данным.
+
+поместите в конфмг путь куда нужно полодить сгенерированый пакет
+"NuGet": {  
+  "OutputDirectory": "E:/Code/.Net/DBCreater/nupkgs"
+}
